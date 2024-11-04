@@ -1,14 +1,13 @@
-import {Text, View} from "react-native";
+import {ChannelList} from "stream-chat-expo";
+import React from "react";
+import {router} from "expo-router";
 
 
 const HomeScreen = () => {
     return(
-        <View>
-            <Text>Home Screen Tab</Text>
-        </View>
+        //
+        <ChannelList onSelect={(channel) => router.push(`/(home)/message/${channel.cid}`) } />
     );
 }
-
-
 
 export default HomeScreen;
