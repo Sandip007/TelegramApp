@@ -1,4 +1,5 @@
-import {ActivityIndicator, SafeAreaView, Text, View} from "react-native";
+import {ActivityIndicator, Text, View} from "react-native";
+import { SafeAreaView } from 'react-native-safe-area-context';
 import {useLocalSearchParams} from "expo-router";
 import {Channel as ChannelType} from "stream-chat";
 import {Channel, MessageList, MessageInput, useChatContext} from "stream-chat-expo";
@@ -25,7 +26,7 @@ const Message = () => {
     return(
         <Channel channel={channel}>
             <MessageList />
-            <SafeAreaView>
+            <SafeAreaView edges={['bottom']}>
                 <MessageInput />
             </SafeAreaView>
         </Channel>
