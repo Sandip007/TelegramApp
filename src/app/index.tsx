@@ -3,7 +3,7 @@ import Colors from "@/constants/Colors";
 import {Redirect} from "expo-router";
 
 export default function HomeScreen() {
-    return <Redirect href={"/(home)/(tab)/"} />;
+    return <Redirect href={"/(auth)/login"} />;
 }
 
 const indexStyle = StyleSheet.create({
